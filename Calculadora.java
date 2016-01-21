@@ -15,6 +15,7 @@ public class Calculadora
     private int num;
     //guarda el total de la suma
     private int total;
+
     /**
      * Constructor for objects of class Calculadora
      */
@@ -46,6 +47,43 @@ public class Calculadora
             num++;
             suma++;
             total = total + num;
+        }
+        System.out.println(total);
+    }
+    /**
+     * Metodo que realiza la suma de todos los valores de un valor a otro
+     */
+    public void sumValuesInterval(int a , int b)
+    {
+        suma = 0;
+        total = 0;
+        int num1;
+        int num2;
+        if (a > b)
+        {
+           num1 = b;
+           num2 = a;
+        }
+        else
+        {
+           num1 = a;
+           num2 = b;
+        }
+        if (num1 < 0 || num2 < 0)
+        {
+            System.out.println("¡¡¡¡¡Error !!!!");
+            System.out.println("-1");
+        }
+        else
+        {
+            int diferencia = num2 - num1;
+            while (suma <= diferencia)
+            {
+                suma++;
+                total = total + num1;
+                num1++;
+            }
+        
         }
         System.out.println(total);
     }
