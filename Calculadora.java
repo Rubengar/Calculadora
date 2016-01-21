@@ -87,4 +87,33 @@ public class Calculadora
         }
         System.out.println(total);
     }
-}
+    /**
+     * Metodo que comprueba si un número es primo 
+     * 
+     */
+    public boolean isPrime(int num) {
+        boolean primo = true;
+        int divisor = 2;
+        if (num < 1) 
+        {
+            System.out.println("!!!!ERROR¡¡¡¡");
+            primo = false;
+        }
+        else 
+        {
+        while (divisor < num && primo) 
+        {
+           if (num % divisor == 0) 
+           {
+               primo = false;
+           }
+           else 
+           {
+               divisor++;
+           }
+        }
+        }
+        return primo;
+        }
+    }
+
