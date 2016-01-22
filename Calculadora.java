@@ -119,14 +119,22 @@ public class Calculadora
     public int multiplicar(int a, int b)
      {
         int total;
+        int suma;
+        int numeroVeces;
+        numeroVeces = 0;
+        total= 0;
         if (a < 0 || b < 0)
         {
             System.out.println("!!!error¡¡¡");
             total = -1;
         }
         else
-        {
-            total = a*b;
+        { 
+            while(numeroVeces != b)
+            {
+               numeroVeces++;
+               total = total + a;
+            }  
         }
         return total;
         
