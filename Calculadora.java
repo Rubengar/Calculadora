@@ -53,26 +53,20 @@ public class Calculadora
     /**
      * Metodo que realiza la suma de todos los valores de un valor a otro
      */
-    public void sumValuesInterval(int a , int b)
+    public int sumValuesInterval(int a , int b)
     {
         suma = 0;
         total = 0;
-        int num1;
-        int num2;
+        int num1 = a;
+        int num2 = b;
         if (a > b)
         {
            num1 = b;
            num2 = a;
         }
-        else
-        {
-           num1 = a;
-           num2 = b;
-        }
         if (num1 < 0 || num2 < 0)
         {
-            System.out.println("¡¡¡¡¡Error !!!!");
-            System.out.println("-1");
+            total = -1;
         }
         else
         {
@@ -83,9 +77,9 @@ public class Calculadora
                 total = total + num1;
                 num1++;
             }
-        
+            
         }
-        System.out.println(total);
+        return total;
     }
     /**
      * Metodo que comprueba si un número es primo 
