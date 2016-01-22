@@ -37,6 +37,7 @@ public class Calculadora
             System.out.println(multiplos);
         }
     }
+
     /**
      * Metodo que suma todos los valores del 0 al 10
      */
@@ -50,6 +51,7 @@ public class Calculadora
         }
         System.out.println(total);
     }
+
     /**
      * Metodo que realiza la suma de todos los valores de un valor a otro
      */
@@ -61,8 +63,8 @@ public class Calculadora
         int num2 = b;
         if (a > b)
         {
-           num1 = b;
-           num2 = a;
+            num1 = b;
+            num2 = a;
         }
         if (num1 < 0 || num2 < 0)
         {
@@ -77,15 +79,17 @@ public class Calculadora
                 total = total + num1;
                 num1++;
             }
-            
+
         }
         return total;
     }
+
     /**
      * Metodo que comprueba si un número es primo 
      * 
      */
-    public boolean isPrime(int num) {
+    public boolean isPrime(int num) 
+    {
         boolean primo = true;
         int divisor = 2;
         if (num < 1) 
@@ -95,19 +99,37 @@ public class Calculadora
         }
         else 
         {
-        while (divisor < num && primo) 
-        {
-           if (num % divisor == 0) 
-           {
-               primo = false;
-           }
-           else 
-           {
-               divisor++;
-           }
-        }
+            while (divisor < num && primo) 
+            {
+                if (num % divisor == 0) 
+                {
+                    primo = false;
+                }
+                else 
+                {
+                    divisor++;
+                }
+            }
         }
         return primo;
-        }
     }
+     /**
+      * Metodo que permite multiplicar dos numeros positivos
+      */
+    public int multiplicar(int a, int b)
+     {
+        int total;
+        if (a < 0 || b < 0)
+        {
+            System.out.println("!!!error¡¡¡");
+            total = -1;
+        }
+        else
+        {
+            total = a*b;
+        }
+        return total;
+        
+     }
+}
 
